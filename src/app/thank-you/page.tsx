@@ -21,10 +21,6 @@ export default function ThankYou() {
 
         <div className="name">— {name}</div>
 
-        <a className="btn" href="/" aria-label="Go back to home">
-          Go back home
-          <span className="shine" aria-hidden="true" />
-        </a>
       </section>
 
       {/* Orbital cyan particles (CSS-only) */}
@@ -138,18 +134,7 @@ export default function ThankYou() {
             0 0 0 1px rgba(255,255,255,.04) inset;
         }
 
-        /* Animated border ring */
-        .panel .ring{
-          position: absolute; inset: -2px;
-          border-radius: 22px;
-          padding: 2px;
-          background: conic-gradient(from 180deg, var(--cyan), #7ff9ff, var(--cyan-2), var(--cyan));
-          -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-          -webkit-mask-composite: xor; mask-composite: exclude;
-          animation: ring 6s linear infinite;
-          pointer-events: none; opacity: .95;
-        }
-        @keyframes ring { to { transform: rotate(360deg); } }
+       
 
         .title{
           margin: 8px 0 8px;
@@ -177,34 +162,7 @@ export default function ThankYou() {
           text-shadow: var(--cyan-glow);
         }
 
-        /* Button with cyan sheen */
-        .btn{
-          position: relative;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          margin: 0 auto;
-          padding: 14px 24px;
-          border-radius: 999px;
-          color: #001318;
-          font-weight: 800;
-          text-decoration: none;
-          background: linear-gradient(180deg, #9ff6ff, #63e8f2 45%, #2fd3e4 60%, #17b6b2 100%);
-          box-shadow: 0 12px 30px rgba(0,229,255,.35), inset 0 1px 0 rgba(255,255,255,.7);
-          width: max-content;
-          transition: transform .18s ease, box-shadow .18s ease;
-        }
-        .btn:hover{ transform: translateY(-2px); box-shadow: 0 16px 38px rgba(0,229,255,.45), inset 0 1px 0 rgba(255,255,255,.8) }
-        .btn .shine{
-          position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none;
-        }
-        .btn .shine::before{
-          content: ""; position: absolute; inset: -45%;
-          background: conic-gradient(from 0deg, rgba(255,255,255,0), rgba(255,255,255,.55), rgba(255,255,255,0));
-          animation: spin 3.2s linear infinite;
-          mix-blend-mode: screen;
-        }
+       
 
         /* Orbital particles around header area */
         .particles{
